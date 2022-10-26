@@ -1,0 +1,11 @@
+@model MvcLabManager.Models.Computer
+
+@{
+    ViewData["Title"] = $"Computador {Model.Id}";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p><b>Id: </b> @Model.Id</p>
+<p><b>Ram: </b> @Model.Ram</p>
+<p><b>Processor: </b> @Model.Processor</p>
+<p><a href="#" class="btn btn-primary btn-sm btn-dark">Atualizar</a>&nbsp;&nbsp;<a href="/Computer/Delete/@Model.Id" class="btn btn-primary btn-sm btn-danger">Excluir</a></p>
