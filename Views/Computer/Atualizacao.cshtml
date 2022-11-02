@@ -1,0 +1,25 @@
+@model MvcLabManager.Models.Computer
+
+@{
+    ViewData["Title"] = "Atualização - Computador";
+}
+<a href="/Computer/Show/@Model.Id" class="btn btn-primary btn-sm btn-light">Voltar</a><br><br>
+<h1>@ViewData["Title"] @Model.Id</h1><br>
+
+<form action="/Computer/Update" method="post">
+    <table>
+        <tr>
+            <td><label for="id">Número de identificação:&nbsp;&nbsp;&nbsp;</label></td>
+            <td><input type="number" name="id" id="id" value="@Model.Id" readonly></td>
+        </tr>
+        <tr>
+            <td><label for="ram">Memória (RAM):</label></td>
+            <td><input type="text" name="ram" id="ram" required> GB</td>
+        </tr>
+        <tr>
+            <td><label for="processor">Processador:</label></td>
+            <td><input type="text" name="processor" id="processor" required></td>
+        </tr>
+    </table><br>
+    <input type="submit" class="btn btn-primary btn-sm btn-success" value="Atualizar">
+</form>

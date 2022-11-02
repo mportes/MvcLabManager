@@ -1,0 +1,27 @@
+@{
+    ViewData["Title"] = "Cadastro - Laboratório";
+}
+<a href="/Lab/Index" class="btn btn-primary btn-sm btn-light">Voltar</a><br><br>
+<h1>@ViewData["Title"]</h1><br>
+
+<form action="/Lab/ValidacaoCadastro" method="post">
+    <table>
+        <tr>
+            <td><label for="id">Número de identificação:&nbsp;&nbsp;&nbsp;</label></td>
+            <td><input type="number" name="id" id="id" required></td>
+        </tr>
+        <tr>
+            <td><label for="number">Número:</label></td>
+            <td><input type="number" name="number" id="number" required> GB</td>
+        </tr>
+        <tr>
+            <td><label for="name">Nome:</label></td>
+            <td><input type="text" name="name" id="name" required></td>
+        </tr>
+        <tr>
+            <td><label for="block">Bloco:</label></td>
+            <td><input type="text" name="block" id="block" required></td>
+        </tr>
+    </table><br>
+    <input type="submit" class="btn btn-primary btn-sm btn-success" value="Cadastrar">
+</form>
